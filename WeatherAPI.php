@@ -11,6 +11,7 @@
 namespace Sebcodes;
 
 use Exception;
+use stdClass;
 
 class WeatherApi
 {
@@ -27,7 +28,7 @@ class WeatherApi
     }
     public function get()
     {
-        $weather = new \stdClass;
+        $weather = new stdClass;
         try {
             $jsonfile = @file_get_contents("http://api.openweathermap.org/data/2.5/weather?q=".$this->countyTown."&units=metric&appid=".$this->apikey."");
 
@@ -50,7 +51,7 @@ class WeatherApi
                 return $weather;
             }
         }
-        catch (\Exception $ex) {
+        catch (Exception $ex) {
             $weather->temp = 0;
             return $weather;
         }

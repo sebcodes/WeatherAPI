@@ -12,11 +12,11 @@ Extract the downloaded zip in your directory
 <?php
 
 #include file
-require_once 'WeatherAPI.php';
+use Sebcodes\WeatherAPI;require_once 'WeatherAPI.php';
 
 #set town/country
 
-$weather = new \Sebcodes\WeatherAPI("Germany");
+$weather = new WeatherAPI("Germany");
 
 #get temperature
 echo $weather->get()->temp;
