@@ -12,7 +12,8 @@ Extract the downloaded zip in your directory
 <?php
 
 #include file
-use Sebcodes\WeatherAPI;require_once 'WeatherAPI.php';
+use Sebcodes\WeatherAPI;
+require_once 'WeatherAPI.php';
 
 #set town/country
 
