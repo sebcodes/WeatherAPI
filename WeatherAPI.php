@@ -24,7 +24,7 @@ class WeatherApi
     {
         if (empty($countyTown)) throw new Exception("Town required");
         $this->countyTown = $countyTown;
-        $this->apikey = "d96e57207afe189a59a4f77059849938";
+        $this->apikey = "your_api_key";
     }
     public function get()
     {
